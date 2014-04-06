@@ -6,11 +6,9 @@ gem 'sinatra'
 gem "sinatra-contrib"
 
 gem 'slim'
-gem 'redcarpet'
 gem 'github-markdown'
 
 gem 'stylus'
-gem 'sass'
 
 gem 'require_all'
 
