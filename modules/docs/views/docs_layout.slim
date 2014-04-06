@@ -19,47 +19,47 @@ html
         input type="search"
         ul.methods
           li.method
-            a href="/docs/controller" controller
+            a.smooth-link href="/docs/controller" controller
           li.method
-            a href="/docs/behavior" behavior
+            a.smooth-link href="/docs/behavior" behavior
           li.method
-            a href="/docs/boundary" boundary
+            a.smooth-link href="/docs/boundary" boundary
           li.method
-            a href="/docs/template" $template
+            a.smooth-link href="/docs/template" $template
           li.method
-            a href="/docs/courier" $courier
+            a.smooth-link href="/docs/courier" $courier
           li.method
-            a href="/docs/view_bag" $viewBag
+            a.smooth-link href="/docs/view_bag" $viewBag
           li.method
-            a href="/docs/data" $data
+            a.smooth-link href="/docs/data" $data
           li.method
-            a href="/docs/helpers" $h
+            a.smooth-link href="/docs/helpers" $h
           li.method
-            a href="/docs/debounce" debounce
+            a.smooth-link href="/docs/debounce" debounce
           li.method
-            a href="/docs/deep_extend" deepExtend
+            a.smooth-link href="/docs/deep_extend" deepExtend
           li.method
-            a href="/docs/window" window
+            a.smooth-link href="/docs/window" window
           li.method
-            a href="/docs/go_to" goTo
+            a.smooth-link href="/docs/go_to" goTo
           li.method
-            a href="/docs/add_class" addClass
+            a.smooth-link href="/docs/add_class" addClass
           li.method
-            a href="/docs/remove_class" removeClass
+            a.smooth-link href="/docs/remove_class" removeClass
           li.method
-            a href="/docs/has_class" hasClass
+            a.smooth-link href="/docs/has_class" hasClass
           li.method
-            a href="/docs/toggle_class" toggleClass
+            a.smooth-link href="/docs/toggle_class" toggleClass
           li.method
-            a href="/docs/boundary" boundaryLab
+            a.smooth-link href="/docs/boundary" boundaryLab
           li.method
-            a href="/docs/controller_lab" controllerLab
+            a.smooth-link href="/docs/controller_lab" controllerLab
           li.method
-            a href="/docs/behavior_lab" behaviorLab
+            a.smooth-link href="/docs/behavior_lab" behaviorLab
           li.method
-            a href="/docs/boundary_lab" boundaryLab
+            a.smooth-link href="/docs/boundary_lab" boundaryLab
 
-      .view
+      .view data-controller="DocsCtrl" data-action="ViewPage"
         == yield if block_given?
         == md_view if defined? md_view
 

@@ -17,7 +17,7 @@ class Stik::Docs < Sinatra::Base
   end
 
   get '/docs/:view/?' do |view|
-    if request.xhr?
+    if params[:partial] == 'true'
       Markdown.render(read_view_file(view))
     else
       slim :docs_layout, locals: {

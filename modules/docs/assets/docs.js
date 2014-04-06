@@ -1,4 +1,20 @@
 stik.boundary({
+  as: 'httpGet',
+  from: 'controller',
+  to: function httpGet(url, whenDone) {
+    request = new XMLHttpRequest();
+    request.onreadystatechange = function() {
+      if (request.readyState == 4 && request.status == 200){
+        whenDone(request.responseText);
+      }
+    }
+
+    request.open( "GET", url, true );
+    request.send( null );
+  }
+});
+
+stik.boundary({
   as: 'fuzzy',
   from: 'controller',
   to: {
@@ -46,6 +62,22 @@ stik.controller('DocsCtrl', function(ctrl){
       toggleMethods(results);
     };
   });
+
+  ctrl.action('ViewPage', function($template, $courier, httpGet){
+    $courier.$receive('smooth-load', function(url){
+      httpGet(url + '?partial=true', function(data){
+        $template.innerHTML = data;
+      });
+    });
+  });
+});
+
+stik.behavior('smooth-link', function($template, $h, $courier){
+  $template.onclick = function(event){
+    event.preventDefault();
+    $h.addClass($template, 'active');
+    $courier.$send('smooth-load', $template.href);
+  };
 });
 
 stik.behavior('active-by-base-url', function($template, $h, urlState){
