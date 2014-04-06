@@ -1,4 +1,4 @@
-###goTo
+##goTo
 Gives you a mockable interface to `window.location`.
 
 ```javascript

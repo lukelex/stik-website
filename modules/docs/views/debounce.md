@@ -1,4 +1,4 @@
-###debounce
+##debounce
 Debouncing ensures that a method gets executed only once, during the specified interval, even if several calls were triggered.
 
 ```javascript

@@ -75,8 +75,10 @@ stik.controller('DocsCtrl', function(ctrl){
 stik.behavior('smooth-link', function($template, $h, $courier){
   $template.onclick = function(event){
     event.preventDefault();
-    $h.addClass($template, 'active');
-    $courier.$send('smooth-load', $template.href);
+    if (!$h.hasClass($template, 'active')) {
+      $h.addClass($template, 'active');
+      $courier.$send('smooth-load', $template.href);
+    }
   };
 });
 

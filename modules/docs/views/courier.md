@@ -1,7 +1,7 @@
-###$courier
+##$courier
 Enables a controller/behavior to send and receive messages from another controller/behavior.
 
-####Using it
+###Using it
 ```javascript
 stik.controller("MessageCtrl", "Sender", function($courier){
   // delegate a new message to the controller responsible for it

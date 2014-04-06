@@ -1,4 +1,4 @@
-###Boundary Lab
+##Boundary Lab
 
 ```javascript
 // this boundary might be defined in your stik_data.js file

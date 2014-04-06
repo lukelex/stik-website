@@ -1,4 +1,4 @@
-###hasClass
+##hasClass
 Checks whether the element has the specified class.
 
 ```javascript

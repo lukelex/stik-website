@@ -1,4 +1,4 @@
-###Controller Lab
+##Controller Lab
 
 ```javascript
 // this controller might be defined in your star_wars_ctrl.js file

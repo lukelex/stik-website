@@ -1,7 +1,7 @@
-###$data
+##$data
 Captures all the `data-*` attributes defined in the template and gives you an object to easily access them.
 
-####Using it
+###Using it
 ```html
 <div class="lightsaber-clash" data-force="strong" data-direction="downwards"></div>
 ```

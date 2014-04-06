@@ -1,4 +1,4 @@
-###Behavior Lab
+##Behavior Lab
 ```javascript
 // this behavior might be defined in your lightsaber-sparks.js file
 stik.behavior( "lightsaber-sparks", function( $template ){

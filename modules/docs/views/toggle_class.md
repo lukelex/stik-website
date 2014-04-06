@@ -1,4 +1,4 @@
-###toggleClass
+##toggleClass
 Toggles the specified class on the element.
 
 ```javascript

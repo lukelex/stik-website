@@ -1,4 +1,4 @@
-###deepExtend
+##deepExtend
 Gives you the ability to deep copy all properties and values from one object to another.
 
 ```javascript

@@ -1,4 +1,4 @@
-###removeClass
+##removeClass
 Removes the specified class from the element.
 
 ```javascript

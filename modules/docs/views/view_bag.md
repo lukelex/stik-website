@@ -1,4 +1,4 @@
-###$viewBag
+##$viewBag
 Enables a controller to `$push` and `$pull` data in and out of its template. While pushing, `$viewBag` will only care about the values within the object passed.
 
 ####Using it

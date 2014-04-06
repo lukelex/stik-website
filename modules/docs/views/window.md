@@ -1,4 +1,4 @@
-###$window
+##$window
 Allows you to mock he window global obj
 ```javascript
 stik.behavior("someWindowDependentBehavior", function($window){

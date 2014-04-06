@@ -1,4 +1,4 @@
-###addClass
+##addClass
 Adds the specified class to the element.
 
 ```javascript
