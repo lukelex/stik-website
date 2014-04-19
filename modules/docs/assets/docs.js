@@ -2,7 +2,7 @@ stik.boundary({
   as: 'httpGet',
   from: 'controller',
   to: function httpGet(url, whenDone) {
-    request = new XMLHttpRequest();
+    var request = new XMLHttpRequest();
     request.onreadystatechange = function() {
       if (request.readyState == 4 && request.status == 200){
         whenDone(request.responseText);
@@ -76,9 +76,13 @@ stik.behavior('smooth-link', function($template, $h, $courier){
   $template.onclick = function(event){
     event.preventDefault();
     if (!$h.hasClass($template, 'active')) {
-      $h.addClass($template, 'active');
       $courier.$send('smooth-load', $template.href);
+      $h.addClass($template, 'active');
     }
+
+    $courier.$receive('smooth-load', function(){
+      $h.removeClass($template, 'active');
+    });
   };
 });
 
