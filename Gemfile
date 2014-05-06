@@ -9,6 +9,7 @@ gem 'slim'
 gem 'github-markdown'
 
 gem 'stylus'
+gem 'coffee-script'
 
 gem 'require_all'
 

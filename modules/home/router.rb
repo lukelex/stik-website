@@ -1,21 +1,30 @@
 require 'sinatra'
 require 'slim'
+require 'coffee-script'
 require 'stylus'
 require 'stylus/tilt'
 
 class Stik::Home < Sinatra::Base
+  get '/vendor/*.js' do |file|
+    send_file File.join(__dir__, "assets/vendor/#{file}.js")
+  end
+
+  get '/assets/stik.min.js' do
+    send_file File.join(__dir__, "assets/stik.min.js")
+  end
+
   get '/assets/*.*' do |file, ext|
     case ext
     when 'css'
       stylus File.read(File.join(__dir__, "assets/#{file}.styl"))
     when 'js'
-      send_file File.read(File.join(__dir__, "assets/#{file}.js"))
+      coffee File.read(File.join(__dir__, "assets/#{file}.coffee"))
+    else
+      fail 'file not found'
     end
   end
 
   get '/?' do
-    view_str = File.read File.join(__dir__, 'views/readme.md')
-    @readme = Markdown.render view_str
-    slim :layout
+    slim :home
   end
 end

@@ -1,0 +1,76 @@
+body
+  font-size 14px
+  line-height 22px
+  background-color #323A45
+  font-family "Source Sans Pro"
+
+.content
+  width 960px
+  padding 100
+  margin 0 auto
+  overflow hidden
+
+.basic-info
+  width 350px
+  margin 0 auto
+  text-align center
+  overflow hidden
+
+  & > .name
+    margin 20px 0
+    color #F5CF77
+    font-size 18px
+    text-transform uppercase
+
+  & > .description
+    color #E3E3E3
+    margin 0 0 20px
+
+  & > .download
+    width 180px
+    height 48px
+    margin 0 auto
+    position relative
+    background-color #72623F
+    border-radius 4px
+    -moz-border-radius 4px
+    -webkit-border-radius 4px
+
+    &:active
+      background-color transparent
+
+      button
+        top 5px
+
+    a
+      text-decoration none
+
+    button
+      top 0
+      left 0
+      width 100%
+      border none
+      font-weight bold
+      padding 15px 0
+      position absolute
+      text-transform uppercase
+      background-color #E9C471
+      border-radius 4px
+      -moz-border-radius 4px
+      -webkit-border-radius 4px
+      cursor pointer
+
+  & > .current-version,
+  & > .customize-package
+    color #E9C471
+    font-size 12px
+    font-weight bold
+    display inline-block
+
+  .separator
+    margin 0 7px
+    font-size 10px
+    display inline-block
+
+  & > .customize-package
+    text-decoration none
