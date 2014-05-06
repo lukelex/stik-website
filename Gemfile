@@ -8,6 +8,7 @@ gem "sinatra-contrib"
 gem 'slim'
 gem 'github-markdown'
 
+gem 'therubyracer', platforms: :ruby
 gem 'stylus'
 gem 'coffee-script'
 
